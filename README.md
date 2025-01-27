@@ -21,13 +21,13 @@ cd jenkins_pipeline_test
 ## Description du pipeline Jenkins
 Ce projet utilise un pipeline Jenkins pour automatiser les étapes suivantes :
 
-###Installation de Maven : Le pipeline vérifie que Maven est installé et disponible dans le chemin d'exécution.
-###Echo de la version de Maven : Affiche la version de Maven utilisée dans le pipeline.
-###Build : Compile le projet en utilisant Maven avec la commande mvn clean package -DskipTests=true.
-###Tests unitaires : Exécute les tests unitaires avec mvn test.
+### Installation de Maven : Le pipeline vérifie que Maven est installé et disponible dans le chemin d'exécution.
+### Echo de la version de Maven : Affiche la version de Maven utilisée dans le pipeline.
+### Build : Compile le projet en utilisant Maven avec la commande mvn clean package -DskipTests=true.
+### Tests unitaires : Exécute les tests unitaires avec mvn test.
 
-##Comment utiliser
-###Configurer Jenkins :
+## Comment utiliser
+### Configurer Jenkins :
 
 Créez un nouveau job Jenkins en sélectionnant "Pipeline" comme type de projet.
 Dans la configuration du job, assurez-vous d'utiliser un agent qui a Maven et Java installés.
@@ -94,21 +94,21 @@ pipeline {
     }
 }
 ```
-##Lancer le job Jenkins :
+## Lancer le job Jenkins :
 
 Cliquez sur "Build Now" pour exécuter le pipeline et voir les résultats.
 Exemple de commande Maven
 Voici quelques commandes Maven que tu peux utiliser dans ton projet :
 
-##Construire le projet :
+## Construire le projet :
 ```bash
 mvn clean package -DskipTests=true
 ```
-##Exécuter les tests unitaires :
+## Exécuter les tests unitaires :
 ```bash
 mvn test
 ```
-##Compiler le projet :
+## Compiler le projet :
 ```bash
 mvn compile
 ```
