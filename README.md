@@ -21,7 +21,7 @@ cd jenkins_pipeline_test
 ## Description du pipeline Jenkins
 Ce projet utilise un pipeline Jenkins pour automatiser les étapes suivantes :
 
-### Installation de Maven : Le pipeline vérifie que Maven est installé et disponible dans le chemin d'exécution.
+-  Installation de Maven : Le pipeline vérifie que Maven est installé et disponible dans le chemin d'exécution.
 ### Echo de la version de Maven : Affiche la version de Maven utilisée dans le pipeline.
 ### Build : Compile le projet en utilisant Maven avec la commande mvn clean package -DskipTests=true.
 ### Tests unitaires : Exécute les tests unitaires avec mvn test.
