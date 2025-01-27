@@ -22,20 +22,20 @@ cd jenkins_pipeline_test
 Ce projet utilise un pipeline Jenkins pour automatiser les étapes suivantes :
 
 -  Installation de Maven : Le pipeline vérifie que Maven est installé et disponible dans le chemin d'exécution.
-### Echo de la version de Maven : Affiche la version de Maven utilisée dans le pipeline.
-### Build : Compile le projet en utilisant Maven avec la commande mvn clean package -DskipTests=true.
-### Tests unitaires : Exécute les tests unitaires avec mvn test.
+-   Echo de la version de Maven : Affiche la version de Maven utilisée dans le pipeline.
+-   Build : Compile le projet en utilisant Maven avec la commande mvn clean package -DskipTests=true.
+-  Tests unitaires : Exécute les tests unitaires avec mvn test.
 
 ## Comment utiliser
-### Configurer Jenkins :
+-   Configurer Jenkins :
 
 Créez un nouveau job Jenkins en sélectionnant "Pipeline" comme type de projet.
 Dans la configuration du job, assurez-vous d'utiliser un agent qui a Maven et Java installés.
-### Configurer le dépôt Git dans Jenkins :
+-   Configurer le dépôt Git dans Jenkins :
 
 Ajoutez l'URL du dépôt Git dans la configuration du job.
 Exemple d'URL : https://github.com/Nouhaila1937/jenkins_pipeline_test.git
-Configurer le pipeline :
+-  Configurer le pipeline :
 
 Dans le champ "Pipeline Script", sélectionnez "Pipeline script " et spécifiez le dépôt Git 
 ```bash
@@ -94,7 +94,7 @@ pipeline {
     }
 }
 ```
-## Lancer le job Jenkins :
+-  Lancer le job Jenkins :
 
 Cliquez sur "Build Now" pour exécuter le pipeline et voir les résultats.
 Exemple de commande Maven
