@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    tools {
+        maven "M399"
+    }
+
+    stages {
+        stage('Echo Version') {
+            steps {
+                sh "echo 'Printing Maven Version'"
+                sh "mvn -version"
+            }
+        }
+
+        stage('Build') {
+    steps {
+
+        // Se déplacer dans le sous-répertoire contenant le pom.xml
+        dir('jenkins-pipeline-demo') {
+            // Afficher les fichiers du répertoire pour vérifier la présence du pom.xml
+            sh "ls -l"
+
+            // Exécuter Maven dans le répertoire où se trouve le pom.xml
+            sh "mvn clean package -DskipTests=true"
+        }
+    }
+}
+        stage('Unit Test') {
+            steps {
+               // Se déplacer dans le répertoire contenant le pom.xml pour exécuter les tests
+                dir('jenkins-pipeline-demo') {
+                    // Exécuter les tests unitaires avec Maven
+                    sh "mvn test"
+                }
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Pipeline terminé.'
+        }
+
+        success {
+            echo 'Le build et les tests ont réussi.'
+        }
+
+        failure {
+            echo 'Le build ou les tests ont échoué.'
+        }
+    }
+}
